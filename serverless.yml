@@ -25,11 +25,13 @@ package:
     - .git/**
     - .env
     - example-vbb-output.json
+  include:
+    - src/**
 
 
 functions:
   alexa-handler:
-    handler: sbahn_ticker.lambda_handler
+    handler: src/sbahn_ticker.lambda_handler
     events:
       - alexaSkill
 

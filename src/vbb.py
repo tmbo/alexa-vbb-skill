@@ -6,8 +6,8 @@ from datetime import datetime
 import requests
 from builtins import str
 
-import config
-import utils
+from src import config
+from src import utils
 
 PRODUCTS = ["S-Bahn", "U-Bahn", "Tram", "Bus", "", "ICE/IC", "RE/RB"]
 

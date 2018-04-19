@@ -1,6 +1,6 @@
 import os
 
-vbb_token = os.environ.get("VBB_TOKEN", "XXXXX")
+vbb_token = os.environ.get("VBB_TOKEN", "XXX")
 
 vbb_base_url = "http://demo.hafas.de/openapi/vbb-proxy"
 

@@ -3,9 +3,9 @@
 
 import logging
 
-import utils
-import vbb
-from speech import build_response, build_speechlet_response
+from src import utils
+from src import vbb
+from src import speech
 
 
 # --------------- Functions that control the skill's behavior ------------------
@@ -24,8 +24,8 @@ def get_welcome_response():
     # that is not understood, they will be prompted again with this text.
     reprompt_text = "Bitte frage doch nach der nächsten Bahnfahrt."
     should_end_session = False
-    return build_response(session_attributes, build_speechlet_response(
-            card_title, speech_output, reprompt_text, should_end_session))
+    return speech.response(session_attributes, card_title, speech_output,
+                           reprompt_text, should_end_session)
 
 
 def handle_session_end_request():
@@ -33,8 +33,8 @@ def handle_session_end_request():
     speech_output = "Sänk you for traveling wis se S-Bahn!"
     # Setting this to true ends the session and exits the skill.
     should_end_session = True
-    return build_response({}, build_speechlet_response(
-            card_title, speech_output, None, should_end_session))
+    return speech.response({}, card_title, speech_output,
+                           None, should_end_session)
 
 
 def set_station_in_session(intent, session):
@@ -67,8 +67,8 @@ def set_station_in_session(intent, session):
                         "Bitte sag mir deine Station, indem du zum Beispiel " \
                         "folgendes sagest: " \
                         "meine station ist griebnitzsee"
-    return build_response(session_attributes, build_speechlet_response(
-            card_title, speech_output, reprompt_text, should_end_session))
+    return speech.response(session_attributes, card_title, speech_output,
+                           reprompt_text, should_end_session)
 
 
 def next_train_speech_output():
@@ -107,8 +107,8 @@ def get_next_train(intent, session):
     # Setting reprompt_text to None signifies that we do not want to reprompt
     # the user. If the user does not respond or says something that is not
     # understood, the session will end.
-    return build_response(session_attributes, build_speechlet_response(
-            intent['name'], speech_output, reprompt_text, should_end_session))
+    return speech.response(session_attributes, intent['name'], speech_output,
+                           reprompt_text, should_end_session)
 
 
 # --------------- Events ------------------

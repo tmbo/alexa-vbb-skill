@@ -1,4 +1,4 @@
-def build_speechlet_response(title, output, reprompt_text, should_end_session):
+def _build_speechlet_response(title, output, reprompt_text, should_end_session):
     return {
         'outputSpeech': {
             'type': 'PlainText',
@@ -19,7 +19,12 @@ def build_speechlet_response(title, output, reprompt_text, should_end_session):
     }
 
 
-def build_response(session_attributes, speechlet_response):
+def response(session_attributes, title, output, reprompt_text,
+             should_end_session):
+    speechlet_response = _build_speechlet_response(title,
+                                                   output,
+                                                   reprompt_text,
+                                                   should_end_session)
     return {
         'version': '1.0',
         'sessionAttributes': session_attributes,

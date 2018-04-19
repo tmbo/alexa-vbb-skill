@@ -23,7 +23,7 @@ system is fine, have never experienced issues with it: [VBB REST API](http://www
 
 ## Setting up the project
 ```
-mkvirtualenv alexa-sbahn
+mkvirtualenv alexa-vbb
 pip install -r requirements.txt
 npm install
 ```
