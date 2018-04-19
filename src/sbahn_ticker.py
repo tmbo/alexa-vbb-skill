@@ -38,9 +38,7 @@ def handle_session_end_request():
 
 
 def set_station_in_session(intent, session):
-    """ Sets the color in the session and prepares the speech to reply to the
-    user.
-    """
+    """Sets the station in the session and prepares the speech to reply."""
 
     card_title = intent['name']
     session_attributes = {}

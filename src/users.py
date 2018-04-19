@@ -1,8 +1,7 @@
 from boto.dynamodb2.exceptions import ItemNotFound
-from boto.dynamodb2.fields import HashKey
 from boto.dynamodb2.table import Table
 
-users = Table('sbahn_alex_users', schema=[HashKey('user_id')])
+users = Table('sbahn_alexa_users')
 
 
 def get_user(user_id):
