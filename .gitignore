@@ -16,7 +16,6 @@ logs/
 tmp/
 profile.*
 *.sqlite
-lastmile_ai/learn/plots/
 *npy
 *#
 /config.json
@@ -34,5 +33,7 @@ projects/
 test_models/model_*
 test_projects/test_project_*
 
-rasa_nlu/tmbo_test.py
-.mypy_cache/
+sbahn_ticker.zip
+.env
+node_modules
+.requirements/

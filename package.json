@@ -1,0 +1,29 @@
+{
+  "name": "alexa-vbb-skill",
+  "version": "1.0.1",
+  "description": "An alexa skill to ask for train departures.",
+  "scripts": {
+    "test": "pytest tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmbo/alexa-vbb-skill.git"
+  },
+  "keywords": [
+    "python",
+    "aws",
+    "lambda",
+    "serverless",
+    "vbb",
+    "alexa"
+  ],
+  "author": "tmbo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmbo/alexa-vbb-skill/issues"
+  },
+  "homepage": "https://github.com/tmbo/alexa-vbb-skill",
+  "dependencies": {
+    "serverless-python-requirements": "^2.2.1"
+  }
+}
