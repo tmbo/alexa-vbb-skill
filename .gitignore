@@ -37,3 +37,4 @@ sbahn_ticker.zip
 .env
 node_modules
 .requirements/
+src/config.py
