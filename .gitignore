@@ -37,4 +37,5 @@ sbahn_ticker.zip
 .env
 node_modules
 .requirements/
-src/config.py
+credentials.yml
+.serverless/

@@ -34,6 +34,8 @@ functions:
     handler: src/sbahn_ticker.lambda_handler
     events:
       - alexaSkill
+    environment:
+      VBB_TOKEN: ${file(credentials.yml):vbbtoken}
 
 plugins:
   - serverless-python-requirements
